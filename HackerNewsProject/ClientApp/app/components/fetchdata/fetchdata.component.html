@@ -1,0 +1,21 @@
+<h1>API Data</h1>
+
+
+
+<p *ngIf="!data"><em>Loading...</em></p>
+
+<table class='table' *ngIf="data">
+    <thead>
+        <tr>
+            <th>Authors</th>
+            <th>Titles</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let d of data">
+            <td>{{ d.by }}</td>
+            <td class="title" (click)="LinkToTitle(d.title)">{{ d.title }}</td>
+           
+        </tr>
+    </tbody>
+</table>
